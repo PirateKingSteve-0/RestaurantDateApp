@@ -1,0 +1,11 @@
+.bttn{
+display: flex;
+justify-content: center;
+position: relative;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
