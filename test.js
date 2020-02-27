@@ -9,6 +9,7 @@ fetch("https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcatego
 })
 .then(response => response.json())
 .then(data => {
+	console.log(data);
 	function Dictionary(){
 		this.datastore = [];
 
@@ -34,7 +35,8 @@ fetch("https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcatego
 	
 		this.findAt = function(key){
 			for(var i=0;i<this.datastore.length;i++){
-				if(this.datastore[i].key ===key){
+				if(this.datastore[i].key == key){
+					// console.log("findAt function yields: " + this.da
 					return this.datastore;
 				}
 			}
@@ -57,8 +59,13 @@ fetch("https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcatego
 
 	while(i<maxCount){
 		ranNum = Math.floor(Math.random()*20);
-		placesToEat.add(data.data[ranNum].name,1);
-		i++;
+		if(ranNum != 6 && ranNum != 15 && ranNum != 24){
+			placesToEat.add(data.data[ranNum].name,1);
+			console.log("ranNum: " + ranNum);
+			console.log(data.data[ranNum].name);
+			
+			i++;
+		}
 		console.log(i);
 	}	
 	console.log(placesToEat.datastore);
@@ -72,8 +79,6 @@ fetch("https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcatego
 	document.getElementById("b8").innerHTML = placesToEat.findAtPos(7);
 	document.getElementById("b9").innerHTML = placesToEat.findAtPos(8);
 	document.getElementById("b10").innerHTML = placesToEat.findAtPos(9);
-
-	
 })
 .catch(err => {
 	console.log(err);
