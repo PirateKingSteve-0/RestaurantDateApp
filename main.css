@@ -2,6 +2,51 @@
     
 }    */
 
+.firstPrompt{
+    display:none;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50;
+}
+
+.secPrompt{
+    display:none; 
+    color:black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50;
+}
+
+.thirdPrompt{
+    display:none; 
+    color:black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50;
+}
+
+.locButton{
+    display: none;
+    color:black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20;
+}
+
+.buttonHolder {
+    position: absolute;
+    top: 50%;
+    left: auto;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -9,4 +54,14 @@ body{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color:white;
+    text-align: center;
 }

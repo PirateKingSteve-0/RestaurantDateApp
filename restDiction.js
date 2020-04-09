@@ -59,6 +59,22 @@ class restDiction {
 	};
 }
 
+//location lookup
+fetch("https://tripadvisor1.p.rapidapi.com/locations/search?location_id=1&limit=30&sort=relevance&offset=0&lang=en_US&currency=USD&units=km&query=pattaya", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
+		"x-rapidapi-key": "cea5764a85mshbf6d70287cd797ap1adc4ejsnd00c8a3aba19"
+	}
+})
+.then(response => response.json())
+.then(location => {
+	console.log(location);
+})
+.catch(err => {
+	console.log(err);
+});
+
 fetch("https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcategory_standalone=10591&lunit=km&restaurant_tagcategory=10591&limit=30&prices_restaurants=10953%252C10955&restaurant_mealtype=10598%252C10599&currency=USD&lang=en_US&location_id=293919", {
 	"method": "GET",
 	"headers": {
@@ -68,6 +84,8 @@ fetch("https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcatego
 })
 .then(response => response.json())
 .then(data => {
+	console.log(data);
+
 	var placesToEat = new restDiction();
 	var count = maxCount; // set at 10
 	var ranNum = 0;
@@ -111,3 +129,8 @@ fetch("https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcatego
 .catch(err => {
 	console.log(err);
 });
+
+var locationID = function retrieveLoc(){
+	var locID = document.getElementsByClassName("locButton").value;
+	console.log(locID);
+}

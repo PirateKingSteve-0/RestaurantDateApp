@@ -20,38 +20,20 @@
     <!--fade js file -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <script src="homeFade.js"></script>
+    <title>Choices, choices, choices</title>
 
-    <title>High Noon, it's time for a meal</title>
-
-    <body></body>
-      <!--had to add the style display none since the first prompt was not fading in properly-->
-      <h1 class="firstPrompt">it's been left to this...</h1>
-      <h2 class="secPrompt">let's begin</h2>
-      <label class="thirdPrompt" for="locName">enter the location to eat in</label>
-
-      <form>
-        <div class="buttonHolder">
-          <input 
-            type="text" 
-            class="locButton"
-            name="inp_loc_ID" 
-            autocomplete="off"
-            required 
-            placeholder=" city, place, destination, etc."
-            minlength="4" maxlength="30"
-            pattern="[a-zA-Z]">
-            
-            <!-- might want to implemetnt validity later for faulty inputs -->
-            <!-- value="inp_loc_ID"; was inside the button tag -->
-            <input type="button" value="submit" onclick="locationID();" onclick="window.location.href='tenChoice.html'"/>
-
-            <!-- <button class="locButton"
-              onclick="locationID();"
-              onclick="window.location.href='tenChoice.html'">submit</button> -->
-        </div>
-      </form>
-      
+    <body>
+        <h1 class="welcome">High Noon</h1>  
+        <button class="bttn" id="b1"></button>
+        <button class="bttn" id="b2"></button>
+        <button class="bttn" id="b3"></button>
+        <button class="bttn" id="b4"></button>
+        <button class="bttn" id="b5"></button>
+        <button class="bttn" id="b6"></button>
+        <button class="bttn" id="b7"></button>
+        <button class="bttn" id="b8"></button>
+        <button class="bttn" id="b9"></button>
+        <button class="bttn" id="b10"></button>
     </body>
 
     <footer>
