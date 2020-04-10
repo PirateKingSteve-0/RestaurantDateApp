@@ -11,3 +11,12 @@ Hope to add next:
  - updated css
  - ability to pick the location at which the user is searching for 
  - maybe a "loading options" prompt
+ 
+ 04-09-20 
+ HTML - added a prompt page, at this point the user can also input the location, destination, etc. of the place they would like to eat
+ CSS  - added a fading algorithm on the front page
+ JS   - added the function to save the input variable
+ 
+ Hope to add next: 
+  - next step will have to be adding the user choices to a list and randoimzing them again
+  - css will have to wait
