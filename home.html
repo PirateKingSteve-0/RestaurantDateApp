@@ -30,21 +30,21 @@
       <h2 class="secPrompt">let's begin</h2>
       <label class="thirdPrompt" for="locName">enter the location to eat in</label>
 
-      <form>
+      <form id="location-form">
         <div class="buttonHolder">
           <input 
+            required 
             type="text" 
             class="locButton"
-            name="inp_loc_ID" 
+            name="inputLocID" 
             autocomplete="off"
-            required 
             placeholder=" city, place, destination, etc."
             minlength="4" maxlength="30"
             pattern="[a-zA-Z]">
             
             <!-- might want to implemetnt validity later for faulty inputs -->
             <!-- value="inp_loc_ID"; was inside the button tag -->
-            <input type="button" value="submit" onclick="locationID();" onclick="window.location.href='tenChoice.html'"/>
+            <input type="button" class="locButton" value="submit" onclick="locationID()" onclick="window.location.href='tenChoice.html'">
 
             <!-- <button class="locButton"
               onclick="locationID();"

@@ -1,4 +1,5 @@
 const maxCount = 10;
+var userInput;
 class restDiction {
     
     datastore = [];
@@ -131,6 +132,7 @@ fetch("https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcatego
 });
 
 var locationID = function retrieveLoc(){
-	var locID = document.getElementsByClassName("locButton").value;
-	console.log(locID);
+	var locID = document.getElementById('location-form');
+	userInput = locID.inputLocID.value;
+	console.log(userInput);
 }
