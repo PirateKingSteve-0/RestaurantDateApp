@@ -12,6 +12,12 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="car_Styles.css">
+    <link rel="stylesheet" type="text/css" href="slider.css">
+    <link rel="stylesheet" href="glide-3.4.1/dist/css/glide.core.min.css">
+    <!--<link rel="stylesheet" href="glide-3.4.1/dist/css/glide.theme.min.css">-->
+
+    <link rel="shortcut icon" href="#">
 
     <!-- JS, Popper,js, and JQuery from Bootstrap CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -20,45 +26,73 @@
     <!--fade js file -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <script src="homeFade.js"></script>
+    <title>Selection</title>
 
-    <title>High Noon, it's time for a meal</title>
+    <body>
+      <div id="map"></div>
+      <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
 
-    <body></body>
-      <!--had to add the style display none since the first prompt was not fading in properly-->
-      <h1 class="firstPrompt">it's been left to this...</h1>
-      <h2 class="secPrompt">let's begin</h2>
-      <label class="thirdPrompt" for="locName">enter the location to eat in</label>
-
-      <form id="location-form">
-        <div class="buttonHolder">
-          <input 
-            required 
-            type="text" 
-            class="locButton"
-            name="inputLocID" 
-            autocomplete="off"
-            placeholder=" city, place, destination, etc."
-            minlength="4" maxlength="30"
-            pattern="[a-zA-Z]">
-            
-            <!-- might want to implemetnt validity later for faulty inputs -->
-            <!-- value="inp_loc_ID"; was inside the button tag -->
-            <input type="button" class="locButton" value="submit" onclick="locationID()" onclick="window.location.href='tenChoice.html'">
-
-            <!-- <button class="locButton"
-              onclick="locationID();"
-              onclick="window.location.href='tenChoice.html'">submit</button> -->
+      <div class="container">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide"><button class="rType rType-1">All</button></li>
+              <li class="glide__slide"><button class="rType rType-2">American</button></li>
+              <li class="glide__slide"><button class="rType rType-3">Asian</button></li> 
+              <li class="glide__slide"><button class="rType rType-4">Italian</button></li>
+              <li class="glide__slide"><button class="rType rType-5">Indian</button></li>
+              <li class="glide__slide"><button class="rType rType-6">Mexican</button></li>
+            </ul>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+            </div>
+          </div>
         </div>
-      </form>
+      </div>
       
+      <div class="slideContainer">
+        <input type="range" min="1" max="25" value="1" class="slider" id="myRange">
+        <span id="travDist"></span>
+      </div>
+
+      <div>
+        <button class="fdPlace" onclick="secCall();">Find Places</button>
+      </div>
+
     </body>
 
-    <footer>
-      This is my footer
-    </footer>
+    <!-- <footer>
+      
+    </footer> -->
 
-     <!-- Since this loads after, add this script call at the end -->
-    <script src="restDiction.js"> </script>
+    <script src="places.js"> </script>
+    <script src="carouselJS.js"></script>
+    <script src="slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    
+    <script>
+      const options = {
+       startAt: 0,
+       type: 'carousel',
+       perView: 5,
+       gap: 100,
+       focusAt: 'center',
+       breakpoint: {
+         600: {
+           perView: 3
+         }
+       }
+      };
+      new Glide('.glide', options).mount()
+    </script>
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?v=3.47&key=AIzaSyAgsrpymvbKkbBsoEoulmiOlNI0AxAHI9M&libraries=places&callback=initGoogle">
+    </script>
   </head>
 </html>

@@ -1,0 +1,61 @@
+.container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.container ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.glide__arrow--right {
+    margin-left: 1045px;
+}
+
+.rType {
+    color: black;
+    background-color: transparent;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+}
+
+.act {
+    border-radius: 0px;
+    border-bottom: 2px solid #ddd; 
+  }
+
+.dAct {
+    border-radius: 0px;
+
+}
+
+@media only screen and (max-width: 375px) {
+    button {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    button {
+        display: none;
+    }
+}
+
+.glide__arrow {
+    color: black;
+    background-color: transparent;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+}
+
+.glide__arrow:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  

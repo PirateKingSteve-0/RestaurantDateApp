@@ -1,0 +1,18 @@
+.slidecontainer {
+    flex-direction: row;
+    display: flex;
+    width: 100%; /* Width of the outside container */
+    margin-left: 50%;
+    margin-top: 5px;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+#travDist {
+    font-size: 14;
+    margin-right: 5px;
+    padding-left: 5px;
+  }
