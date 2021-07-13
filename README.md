@@ -11,3 +11,14 @@ Hope to add next:
  - updated css
  - ability to pick the location at which the user is searching for 
  - maybe a "loading options" prompt
+
+
+07/012/21
+- Made many changes since last push. These include:
+  * Use of google places and maps API to populate a JSON object of local restaurants
+  * Slider.js for some fancy UI experience
+
+Issues: 
+  * CORs issue, need to figure out how to run on server side proficiently
+  * JSON parsing error recently appeared that needs to be addressed
+
